@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: tiimo-slide-deck
+    runtime: static
+    buildCommand: echo "No build step"
+    staticPublishPath: .
+    routes:
+      - type: redirect
+        source: /
+        destination: /slides-theme/watchos-rebuild.html
+      - type: redirect
+        source: /watchos
+        destination: /slides-theme/watchos-rebuild.html
+    previews:
+      generation: automatic
